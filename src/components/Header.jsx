@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import dakLogo from '../assets/dak.jpeg';
-import kudcLogo from '../assets/kudc.jpeg';
+import kudcLogo from '../assets/kudc1.jpeg';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
