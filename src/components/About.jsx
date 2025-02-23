@@ -1,5 +1,5 @@
 import React from "react";
-import { FaChess, FaBullhorn, FaHandsHelping,  FaMicrophone } from "react-icons/fa";
+import { FaChess, FaBullhorn, FaHandsHelping, FaMicrophone } from "react-icons/fa";
 import { motion } from "framer-motion";
 import activeDebate from "../assets/IMG_2320.JPG";
 import engagedAudience from "../assets/IMG_2287.JPG";
@@ -7,11 +7,11 @@ import publicSpeakingImage from "../assets/IMG_3182.jpg";
 
 const About = () => {
   return (
-    <div className="py-16 bg-gradient-to-r from-blue-50 via-indigo-100 to-purple-100 overflow-hidden">
-      <div className="container mx-auto px-4">
-        {/* Title with Animation */}
+    <div className="py-20 bg-gradient-to-r from-blue-100 via-indigo-200 to-purple-200 overflow-hidden">
+      <div className="container mx-auto px-6">
+        {/* Title */}
         <motion.h2
-          className="text-5xl font-bold text-blue-900 mb-12 text-center"
+          className="text-5xl font-extrabold text-blue-900 mb-16 text-center"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -21,51 +21,39 @@ const About = () => {
 
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Text Section */}
           <motion.div
             className="text-lg text-gray-800 leading-relaxed space-y-6"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            <p>
-              <strong>The Debate Association of Kenya (DAK)</strong> and <strong>The Kenya Universities Debate Championship (KUDC)</strong> are dedicated to fostering critical thinking, structured argumentation, and effective public speaking. Through debate, we encourage students and professionals to engage in meaningful discussions on global and national issues.
-            </p>
-            <p>
-              Debate is more than a competition; it is an intellectual sport that enhances analytical thinking, confidence, and persuasion skills. Whether it's British Parliamentary Debate (BP) which tests teamwork, rebuttals, and structured reasoning or Public Forum Debate, where speakers articulate their perspectives to a broader audience, our platforms cultivate leaders of tomorrow.
-            </p>
+            <p className="text-gray-700 text-lg">The Debate Association of Kenya (DAK) is a youth-led organization dedicated to fostering intellectual discourse, empowering youth voices, and shaping transformative advocacy. Through a rich tapestry of programs, including debate and public speaking training, thematic tournaments, and youth empowerment initiatives, DAK strives to amplify audacious voices for societal change.</p>
             <motion.img
               src={activeDebate}
               alt="Students actively debating"
-              className="rounded-lg shadow-2xl w-full md:w-3/4 transform hover:scale-105 transition duration-500"
-              whileHover={{ scale: 1.1 }}
+              className="rounded-xl shadow-lg w-full md:w-3/4 transition-transform duration-500 hover:scale-105"
             />
           </motion.div>
 
-          {/* Second Column */}
           <motion.div
             className="text-lg text-gray-800 leading-relaxed space-y-6"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            <p>
-              <strong>Why Debate?</strong> Engaging in structured debate sharpens persuasion, research skills, and the ability to think on one's feet. Participants develop the ability to formulate strong arguments, counter opposing viewpoints, and present their case convincingly.
-            </p>
-            <p>
-              Our mission is not only to create the next generation of elite debaters but also to equip young minds with leadership and advocacy skills. Many of our alumni go on to become policymakers, lawyers, journalists, and thought leaders across various industries.
-            </p>
+            <h3 className="text-3xl font-bold text-blue-900">Vision & Mission</h3>
+            <p><strong className="text-indigo-700">Vision:</strong> "Empowering Audacious Youth Voices for Transformative Advocacy"</p>
+            <p><strong className="text-indigo-700">Mission:</strong> "Cultivating Fearless Advocates to nurture the Intersection of Activism and Debate"</p>
             <motion.img
               src={engagedAudience}
               alt="Engaged debate audience"
-              className="rounded-lg shadow-2xl w-full md:w-3/4 transform hover:scale-105 transition duration-500"
-              whileHover={{ scale: 1.1 }}
+              className="rounded-xl shadow-lg w-full md:w-3/4 transition-transform duration-500 hover:scale-105"
             />
           </motion.div>
         </div>
 
         {/* Public Speaking Section */}
-        <div className="mt-16 grid md:grid-cols-2 gap-12 items-center">
+        <div className="mt-20 grid md:grid-cols-2 gap-12 items-center">
           <motion.div
             className="text-lg text-gray-800 leading-relaxed space-y-6"
             initial={{ opacity: 0, x: -50 }}
@@ -73,24 +61,19 @@ const About = () => {
             transition={{ duration: 1, delay: 0.5 }}
           >
             <h3 className="text-3xl font-bold text-blue-900">Public Speaking</h3>
-            <p>
-              Public speaking is at the heart of our mission. We empower individuals to articulate their ideas with confidence, clarity, and impact. Whether delivering keynote speeches, panel discussions, or persuasive presentations, mastering public speaking is a crucial skill for leaders and changemakers.
-            </p>
-            <p>
-              Through workshops, coaching, and practice sessions, we help individuals refine their delivery, control stage presence, and engage audiences effectively. Our goal is to make every speaker a powerful communicator.
-            </p>
+            <p>Public speaking is at the heart of our mission. We empower individuals to articulate their ideas with confidence, clarity, and impact.</p>
+            <p>Through workshops, coaching, and practice sessions, we help individuals refine their delivery, control stage presence, and engage audiences effectively.</p>
           </motion.div>
           <motion.img
             src={publicSpeakingImage}
             alt="Public speaking session"
-            className="rounded-lg shadow-2xl w-full md:w-3/4 transform hover:scale-105 transition duration-500"
-            whileHover={{ scale: 1.1 }}
+            className="rounded-xl shadow-lg w-full md:w-3/4 transition-transform duration-500 hover:scale-105"
           />
         </div>
 
         {/* Icons Section */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
@@ -102,19 +85,18 @@ const About = () => {
           ].map((item, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center text-blue-900 p-6 shadow-lg rounded-lg bg-white transform hover:scale-105 transition duration-300"
-              whileHover={{ scale: 1.1 }}
+              className="flex flex-col items-center text-blue-900 p-6 shadow-md rounded-lg bg-white transition-transform duration-300 hover:scale-105"
             >
-              <item.icon size={50} className="mb-4" />
+              <item.icon size={50} className="mb-4 text-indigo-600" />
               <h3 className="font-semibold text-xl text-center">{item.title}</h3>
-              <p className="text-center mt-2">{item.desc}</p>
+              <p className="text-center mt-2 text-gray-700">{item.desc}</p>
             </motion.div>
           ))}
         </motion.div>
 
         {/* Quote Section */}
         <motion.div
-          className="mt-16 text-center"
+          className="mt-20 text-center bg-gray-100 p-8 rounded-lg shadow-md"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 }}

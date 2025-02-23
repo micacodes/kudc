@@ -2,10 +2,10 @@ import React, { useState, useEffect, useCallback } from 'react';
 
 // Import images for the carousel
 import image1 from '../assets/angie.jpeg';
-import image2 from '../assets/_DSC3937.jpg';
+// import image2 from '../assets/_DSC3937.jpg';
 import image3 from '../assets/_DSC3886.jpg';
 import image4 from '../assets/_DSC3895.jpg';
-import image5 from '../assets/_DSC3943.jpg'
+// import image5 from '../assets/_DSC3943.jpg'
 
 
 const Hero = () => {
@@ -13,7 +13,7 @@ const Hero = () => {
   const [fade, setFade] = useState(false); // For fade transition effect
 
   // Image array with imported images
-  const images = [image1, image2, image3, image4, image5];
+  const images = [image1, image3, image4];
 
   // Function to handle the next image in the carousel
   const handleNext = useCallback(() => {
